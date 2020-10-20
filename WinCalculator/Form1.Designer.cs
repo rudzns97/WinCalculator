@@ -159,7 +159,7 @@
             // 
             // lblCal
             // 
-            this.lblCal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCal.BackColor = System.Drawing.Color.White;
             this.lblCal.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblCal.Location = new System.Drawing.Point(9, 21);
             this.lblCal.Name = "lblCal";
@@ -176,7 +176,7 @@
             this.button11.TabIndex = 11;
             this.button11.Text = "CE";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.Btn_Click);
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -187,7 +187,7 @@
             this.button12.TabIndex = 12;
             this.button12.Text = "=";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.Btn_Click);
+            this.button12.Click += new System.EventHandler(this.Operation_Click);
             // 
             // button13
             // 
@@ -196,9 +196,9 @@
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(65, 50);
             this.button13.TabIndex = 13;
-            this.button13.Text = "%";
+            this.button13.Text = "/";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.Btn_Click);
+            this.button13.Click += new System.EventHandler(this.Operation_Click);
             // 
             // button14
             // 
@@ -209,7 +209,7 @@
             this.button14.TabIndex = 14;
             this.button14.Text = "*";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.Btn_Click);
+            this.button14.Click += new System.EventHandler(this.Operation_Click);
             // 
             // button15
             // 
@@ -220,7 +220,7 @@
             this.button15.TabIndex = 15;
             this.button15.Text = "-";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.Btn_Click);
+            this.button15.Click += new System.EventHandler(this.Operation_Click);
             // 
             // button16
             // 
@@ -231,7 +231,7 @@
             this.button16.TabIndex = 16;
             this.button16.Text = "+";
             this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.Btn_Click);
+            this.button16.Click += new System.EventHandler(this.Operation_Click);
             // 
             // Form1
             // 
@@ -256,8 +256,10 @@
             this.Controls.Add(this.Btn8);
             this.Controls.Add(this.Btn7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "계산기";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
         }
